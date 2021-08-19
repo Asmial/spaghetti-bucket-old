@@ -16,5 +16,5 @@ jobs:
         if: startsWith(github.event.comment.body, '/verify')
         env:
           SHOVEL: "1"
-          GITH_EMAIL: therandomlabsinc@gmail.com
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITH_EMAIL: ${{ secrets.GITH_EMAIL }}
+          GITHUB_TOKEN: ${{ secrets.GITH_TOKEN }}
