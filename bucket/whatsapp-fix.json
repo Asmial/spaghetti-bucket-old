@@ -1,0 +1,57 @@
+{
+    "version": "2.2130.9",
+    "description": "A cross-platform messaging and Voice over IP service.",
+    "homepage": "https://www.whatsapp.com",
+    "license": {
+        "identifier": "Freeware",
+        "url": "https://www.whatsapp.com/legal/"
+    },
+    "architecture": {
+        "64bit": {
+            "url": "https://web.whatsapp.com/desktop/windows/release/x64/WhatsApp-2.2130.9-full.nupkg#/dl.7z",
+            "hash": "sha1:485930b13850ca6a71b4aad6ebce8f2e1121ed9d"
+        },
+        "32bit": {
+            "url": "https://web.whatsapp.com/desktop/windows/release/ia32/WhatsApp-2.2130.9-full.nupkg#/dl.7z",
+            "hash": "sha1:219da1bb07beaa8960d9c21d576a0183091edf69"
+        }
+    },
+    "extract_dir": "lib\\net45",
+    "bin": "whatsapp.exe",
+    "shortcuts": [
+        [
+            "whatsapp.exe",
+            "WhatsApp"
+        ]
+    ],
+    "checkver": {
+        "url": "https://web.whatsapp.com/desktop/windows/release/x64/RELEASES",
+        "regex": "WhatsApp-([\\d.]+)-full\\.nupkg",
+        "reverse": true
+    },
+    "post_install": [
+        "$directory = [System.IO.Path]::Combine([Environment]::GetFolderPath('startmenu'), 'Programs', 'Scoop Apps')",
+        "if($global) {",
+        "    $directory = [System.IO.Path]::Combine([Environment]::GetFolderPath('commonstartmenu'), 'Programs', 'Scoop Apps')",
+        "}",
+        "(scoop info whatsapp | sls Version: -NoEmphasis| Out-String) -match '([\\d\\.]+)' > $null",
+        "$version = $Matches.0",
+        "$shell = New-Object -COM WScript.Shell",
+        "$shortcut = $shell.CreateShortcut(\"$directory\\Whatsapp.lnk\")",
+        "$shortcut.TargetPath = $shortcut.TargetPath -replace '(.*)\\\\current\\\\(.*)', \"`$1\\$version\\`$2\"",
+        "$shortcut.Save()"
+    ],
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://web.whatsapp.com/desktop/windows/release/x64/WhatsApp-$version-full.nupkg#/dl.7z"
+            },
+            "32bit": {
+                "url": "https://web.whatsapp.com/desktop/windows/release/ia32/WhatsApp-$version-full.nupkg#/dl.7z"
+            }
+        },
+        "hash": {
+            "url": "$baseurl/RELEASES"
+        }
+    }
+}
