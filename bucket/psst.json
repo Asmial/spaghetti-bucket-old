@@ -1,13 +1,12 @@
 {
-    "version": "1.0",
+    "version": "84766361",
     "architecture": {
         "64bit": {
-            "url": "https://nightly.link/jpochyla/psst/workflows/build/master/Psst.exe.zip",
-            "extract_dir": "."
+            "url": "https://nightly.link/jpochyla/psst/workflows/build/master/Psst.exe.zip"
         }
     },
-    "extract_dir": ".",
-    "bin": [
+    "bin": "psst-gui.exe",
+    "shortcuts": [
         [
             "psst-gui.exe",
             "Psst"
@@ -17,11 +16,15 @@
         "url": "https://nightly.link/jpochyla/psst/workflows/build/master/Psst.exe",
         "regex": "https://nightly.link/jpochyla/psst/actions/runs/([\\d]+)/Psst.exe.zip"
     },
+    "uninstaller": {
+        "script": [
+            "if ($purge) { Remove-Item -ErrorAction Ignore -Recurse -Force \"$env:APPDATA\\Psst\" }"
+        ]
+    },
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://nightly.link/jpochyla/psst/workflows/build/master/Psst.exe.zip",
-                "extract_dir": "."
+                "url": "https://nightly.link/jpochyla/psst/workflows/build/master/Psst.exe.zip"
             }
         }
     }
