@@ -1,3 +1,3 @@
 ```powershell
-scoop bucket add spaghetti https://github.com/starise/spaghetti-bucket
+scoop bucket add spaghetti https://github.com/Asmial/spaghetti-bucket
 ```
