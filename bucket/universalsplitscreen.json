@@ -1,0 +1,21 @@
+{
+    "version": "1.2.0",
+    "description": "Split screen multiplayer for any game with multiple keyboards, mice and controllers.",
+    "homepage": "https://github.com/UniversalSplitScreen/UniversalSplitScreen",
+    "license": "MIT",
+    "url": "https://github.com/UniversalSplitScreen/UniversalSplitScreen/releases/download/v1.2.0/UniversalSplitScreen1.2.0.zip",
+    "hash": "bcab018c1bccbc0aa22e22726a8dfc95538c44e39d567b1edd5076ec47be6a77",
+    "bin": "UniversalSplitScreen.exe",
+    "extract_dir": "Universal Split Screen 1.2.0",
+    "shortcuts": [
+        [
+            "UniversalSplitScreen.exe",
+            "Universal Split Screen"
+        ]
+    ],
+    "checkver": "github",
+    "autoupdate": {
+        "url": "https://github.com/UniversalSplitScreen/UniversalSplitScreen/releases/download/v$version/UniversalSplitScreen$version.zip",
+        "extract_dir":"Universal Split Screen $version"
+    }
+}

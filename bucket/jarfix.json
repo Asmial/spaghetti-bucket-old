@@ -1,0 +1,20 @@
+{
+    "version": "3.0.0",
+    "url": "https://johann.loefflmann.net/downloads/jarfix.exe",
+    "hash": "3a00c5b808954e9dca76418506eacec9cb1cb0fd844318a896ebae787f5eaae2",
+    "bin": "jarfix.exe",
+    "homepage": "https://johann.loefflmann.net/en/software/jarfix/index.html",
+    "shortcuts": [
+        [
+            "jarfix.exe",
+            "Jarfix"
+        ]
+    ],
+    "checkver": {
+        "url": "https://johann.loefflmann.net/en/software/jarfix/index.html",
+        "regex": "<span itemprop=\"softwareVersion\">([\\d]+)</span>"
+    },
+    "autoupdate": {
+        "url": "https://johann.loefflmann.net/downloads/jarfix.exe"
+    }
+}
