@@ -1,0 +1,28 @@
+{
+    "version": "1.0",
+    "architecture": {
+        "64bit": {
+            "url": "https://nightly.link/jpochyla/psst/workflows/build/master/Psst.exe.zip",
+            "extract_dir": "."
+        }
+    },
+    "extract_dir": ".",
+    "bin": [
+        [
+            "psst-gui.exe",
+            "Psst"
+        ]
+    ],
+    "checkver": {
+        "url": "https://nightly.link/jpochyla/psst/workflows/build/master/Psst.exe",
+        "regex": "https://nightly.link/jpochyla/psst/actions/runs/([\\d]+)/Psst.exe.zip"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://nightly.link/jpochyla/psst/workflows/build/master/Psst.exe.zip",
+                "extract_dir": "."
+            }
+        }
+    }
+}
