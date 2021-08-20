@@ -30,7 +30,7 @@
         "reverse": true
     },
     "post_install": [
-        "& \"$(Find-BucketDirectory $bucket)\\..\\scripts\\whatsapp-fix-shortcut.ps1\""
+        "& \"$(Find-BucketDirectory $bucket)\\..\\scripts\\shortcuts-fix.ps1\""
     ],
     "autoupdate": {
         "architecture": {
