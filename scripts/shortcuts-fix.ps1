@@ -1,7 +1,7 @@
 @(arch_specific 'shortcuts' $manifest $arch) | Where-Object { $_ -ne $null } | ForEach-Object {
     $directory = shortcut_folder $global
     $target = (scoop prefix $app | Get-Item).Target
-    $shell = New-Object -COM WScript.Shell
+    $shell = New-Object -ComObject WScript.Shell
     $shortcut = $shell.CreateShortcut("$directory\\$($_.item(1)).lnk")
     $shortcut.TargetPath = "$target\$($_.item(0))"
     $shortcut.Save()
