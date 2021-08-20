@@ -30,16 +30,7 @@
         "reverse": true
     },
     "post_install": [
-        "$directory = [System.IO.Path]::Combine([Environment]::GetFolderPath('startmenu'), 'Programs', 'Scoop Apps')",
-        "if($global) {",
-        "    $directory = [System.IO.Path]::Combine([Environment]::GetFolderPath('commonstartmenu'), 'Programs', 'Scoop Apps')",
-        "}",
-        "(scoop info whatsapp | sls Version: -NoEmphasis| Out-String) -match '([\\d\\.]+)' > $null",
-        "$version = $Matches.0",
-        "$shell = New-Object -COM WScript.Shell",
-        "$shortcut = $shell.CreateShortcut(\"$directory\\Whatsapp.lnk\")",
-        "$shortcut.TargetPath = $shortcut.TargetPath -replace '(.*)\\\\current\\\\(.*)', \"`$1\\$version\\`$2\"",
-        "$shortcut.Save()"
+        "& \"$(Find-BucketDirectory $bucket)\\..\\scripts\\whatsapp-fix-shortcut.ps1\""
     ],
     "autoupdate": {
         "architecture": {
