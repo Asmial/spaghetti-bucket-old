@@ -1,0 +1,18 @@
+{
+    "version": "1.3.9",
+    "description": "RetroBar teleports you back in time by replacing your modern Windows taskbar with the classic Windows 95, 98, Me, 2000, or XP style.",
+    "homepage": "https://github.com/dremin/RetroBar",
+    "url": "https://github.com/dremin/RetroBar/releases/download/v1.3.9/RetroBar.zip",
+    "hash": "8a4c7837df3bf0e3afc7bc4112ca66f240388f9a4e05855823cdb80dd20ebb7a",
+    "bin": "RetroBar.exe",
+    "shortcuts": [
+        [
+            "RetroBar.exe",
+            "RetroBar"
+        ]
+    ],
+    "checkver": "github",
+    "autoupdate": {
+        "url": "https://github.com/dremin/RetroBar/releases/download/v$version/RetroBar.zip"
+    }
+}
