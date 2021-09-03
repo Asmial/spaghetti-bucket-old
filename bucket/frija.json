@@ -15,6 +15,10 @@
     "uninstaller": {
         "script": "if ($purge) { Remove-Item -ErrorAction Ignore -Recurse -Force \"$env:LOCALAPPDATA\\Frija\" }"
     },
+    "depends": [
+        "vcredist2008",
+        "vcredist2010"
+    ],
     "autoupdate": {
         "url": "https://github.com/SlackingVeteran/frija/releases/download/v$version/Frija-v$version.zip"
     }
