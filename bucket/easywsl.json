@@ -1,0 +1,19 @@
+{
+    "version": "1.2",
+    "description": "Use Docker Containers as WSL Distros.",
+    "homepage": "https://github.com/redcode-labs/easyWSL",
+    "url": "https://github.com/redcode-labs/easyWSL/releases/download/1.2/Release.zip",
+    "hash": "fb0808efd874a5104317987dd94c534df232338f0083057468e8a5fdb0a7d65d",
+    "bin": "easyWSL.exe",
+    "extract_dir": "Release",
+    "shortcuts": [
+        [
+            "easyWSL.exe",
+            "easyWSL"
+        ]
+    ],
+    "checkver": "github",
+    "autoupdate": {
+        "url": "https://github.com/redcode-labs/easyWSL/releases/download/$version/Release.zip"
+    }
+}
