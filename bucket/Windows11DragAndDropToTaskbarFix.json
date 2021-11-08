@@ -1,0 +1,20 @@
+{
+    "version": "v.1.8.0.0-release",
+    "description": "This program fixes the missing \"Drag & Drop to the Taskbar\" support in Windows 11.",
+    "homepage": "https://github.com/HerMajestyDrMona/Windows11DragAndDropToTaskbarFix",
+    "url": "https://github.com/HerMajestyDrMona/Windows11DragAndDropToTaskbarFix/releases/download/v.1.8.0.0-release/Windows11DragAndDropToTaskbarFix.exe",
+    "bin": "Windows11DragAndDropToTaskbarFix.exe",
+    "hash": "3fbc36ca95f3e919e3ed024d72e0deb99677637eebf39990aebe307d27f6690d",
+    "shortcuts": [
+        [
+            "Windows11DragAndDropToTaskbarFix.exe",
+            "Windows11DragAndDropToTaskbarFix"
+        ]
+    ],
+    "pre_install":"New-Item -Path $dir -ItemType File -ErrorAction Ignore -Name 'Windows11DragAndDropToTaskbarFixConfig.txt' | Out-Null",
+    "persist": "Windows11DragAndDropToTaskbarFixConfig.txt",
+    "checkver": "github",
+    "autoupdate": {
+        "url": "https://github.com/HerMajestyDrMona/Windows11DragAndDropToTaskbarFix/releases/download/$version/Windows11DragAndDropToTaskbarFix.exe"
+    }
+}
