@@ -1,9 +1,9 @@
 {
-    "version": "1619237438",
+    "version": "1619374985",
     "architecture": {
         "64bit": {
             "url": "https://nightly.link/jpochyla/psst/workflows/build/master/Psst.exe.zip",
-            "hash": "c7dcb1242faf184453d35f4cf311b34ce9eb08870fdeb51adb4c0934463fd92a"
+            "hash": "3cd08a160d41fd5170679b5cb0e556ccdc91777ca4e79d3acbf0b12840149528"
         }
     },
     "homepage": "https://github.com/jpochyla/psst",
