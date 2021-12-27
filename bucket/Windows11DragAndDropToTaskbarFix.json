@@ -15,6 +15,6 @@
     "persist": "Windows11DragAndDropToTaskbarFixConfig.txt",
     "checkver": "github",
     "autoupdate": {
-        "url": "https://github.com/HerMajestyDrMona/Windows11DragAndDropToTaskbarFix/releases/download/$version/Windows11DragAndDropToTaskbarFix.exe"
+        "url": "https://github.com/HerMajestyDrMona/Windows11DragAndDropToTaskbarFix/releases/download/v$version-release/Windows11DragAndDropToTaskbarFix.exe"
     }
 }
