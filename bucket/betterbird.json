@@ -1,0 +1,54 @@
+{
+    "version": "91.6.1-bb27",
+    "description": "Betterbird is a fine-tuned version of Mozilla Thunderbird, Thunderbird on steroids, if you will.",
+    "homepage": "https://www.betterbird.eu",
+    "license": "MPL-2.0",
+    "notes": [
+        "To set profile 'Scoop' as *DEFAULT*, or profiles/settings was lost after update:",
+        "  - Run 'Betterbird Profile Manager', choose 'Scoop' then click 'Start Betterbird'.",
+        "  - Visit 'about:profiles' page in Betterbird to check *DEFAULT* profile.",
+        "For details: https://support.mozilla.org/en-US/kb/profile-manager-create-and-remove-thunderbird-profiles"
+    ],
+    "architecture": {
+        "64bit": {
+            "url": "https://www.betterbird.eu/downloads/WindowsPortable/BetterbirdPortable-91.6.1-bb27.en-US.win64.exe#/dl.7z",
+            "hash": "6A51B7CA68F3775D01CB3ACAD6D8A55F24CD7BA60900DC0619059734E865D014"
+        }
+    },
+    "extract_dir": "core",
+    "post_install": [
+        "betterbird -CreateProfile \"Scoop $persist_dir\\profile\"",
+        "$Addition = \"$persist_dir\\addition\"",
+        "if (Test-Path $Addition) {",
+        "  info 'Copying additional items...'",
+        "  Copy-Item -Path $Addition\\* -Destination $dir -Force -Recurse -ErrorAction SilentlyContinue",
+        "}"
+    ],
+    "bin": "betterbird.exe",
+    "shortcuts": [
+        [
+            "betterbird.exe",
+            "Betterbird"
+        ],
+        [
+            "betterbird.exe",
+            "Betterbird Profile Manager",
+            "-P"
+        ]
+    ],
+    "persist": [
+        "distribution",
+        "profile"
+    ],
+    "checkver": {
+        "url": "https://www.betterbird.eu/downloads/index.php",
+        "regex": "Table of Downloads for version ([\\d\\.]+-bb\\d+) \\("
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://www.betterbird.eu/downloads/WindowsPortable/BetterbirdPortable-$version.en-US.win64.exe#/dl.7z"
+            }
+        }
+    }
+}
