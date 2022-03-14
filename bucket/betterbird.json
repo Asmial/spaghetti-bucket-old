@@ -12,7 +12,7 @@
     "architecture": {
         "64bit": {
             "url": "https://www.betterbird.eu/downloads/WindowsPortable/BetterbirdPortable-91.7.0-bb28.en-US.win64.exe#/dl.7z",
-            "hash": "97a4b3e6aa5aae99fd644e1db7ef5730fcec7ac281b293cff83edf3b50bb9b0d"
+            "hash": "4e4ee6ef6d79a95355743f9f5988db05d00e4a91452321707f57e2785b9923d2"
         }
     },
     "extract_dir": "core",
