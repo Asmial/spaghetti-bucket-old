@@ -1,19 +1,14 @@
-name: Pull Requests
-
 on:
   pull_request:
-    types: [opened]
-
+    types: [ opened ]
+name: Pull Requests
 jobs:
-  pullRequestValidator:
-    name: Pull Request Validator
+  pullRequestHandler:
+    name: PullRequestHandler
     runs-on: windows-latest
-
     steps:
-      - uses: actions/checkout@master
-      - name: Validate Pull Request
-        uses: Ash258/Scoop-GithubActions@stable-win
-        env:
-          SHOVEL: "1"
-          GITH_EMAIL: ${{ secrets.GITH_EMAIL }}
-          GITHUB_TOKEN: ${{ secrets.GITH_TOKEN }}
+    - uses: actions/checkout@main
+    - name: PullRequestHandler
+      uses: ScoopInstaller/GithubActions@main
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITH_TOKEN }}

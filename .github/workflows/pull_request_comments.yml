@@ -1,20 +1,15 @@
-name: Pull Request Comments
-
 on:
   issue_comment:
-    types: [created]
-
+    types: [ created ]
+name: Commented Pull Request
 jobs:
-  pullRequestValidator:
-    name: Pull Request Validator
+  pullRequestHandler:
+    name: PullRequestHandler
     runs-on: windows-latest
-
     steps:
-      - uses: actions/checkout@master
-      - name: Validate Pull Request
-        uses: Ash258/Scoop-GithubActions@stable-win
-        if: startsWith(github.event.comment.body, '/verify')
-        env:
-          SHOVEL: "1"
-          GITH_EMAIL: ${{ secrets.GITH_EMAIL }}
-          GITHUB_TOKEN: ${{ secrets.GITH_TOKEN }}
+    - uses: actions/checkout@main
+    - name: PullRequestHandler
+      uses: ScoopInstaller/GithubActions@main
+      if: startsWith(github.event.comment.body, '/verify')
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITH_TOKEN }}
