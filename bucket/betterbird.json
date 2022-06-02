@@ -42,7 +42,7 @@
     ],
     "checkver": {
         "url": "https://www.betterbird.eu/downloads/index.php",
-        "regex": "Table of Downloads for version ([\\d\\.]+-bb\\d+) \\("
+        "regex": "Table of Downloads for version (\\d+\\.\\d+\\.\\d+-bb\\d+)"
     },
     "autoupdate": {
         "architecture": {
