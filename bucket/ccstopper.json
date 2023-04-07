@@ -1,11 +1,11 @@
 {
-    "version": "1.2.1",
+    "version": "1.2.2",
     "description": "Kills Adobe's pesky background apps and more!",
     "homepage": "https://github.com/eaaasun/CCStopper",
     "license": "GPL-3.0",
-    "url": "https://github.com/eaaasun/CCStopper/releases/download/v1.2.1/CCStopper.zip",
+    "url": "https://github.com/eaaasun/CCStopper/releases/download/v1.2.2/CCStopper.zip",
     "bin": "CCStopper.bat",
-    "hash": "790292e43bdd4ea84c6192795bad01b4750bf9cb75c22ab0f888055a1caa5219",
+    "hash": "5a36a0928d4d31a3adaa65864e600d4f96dff9189d17bb89febec6e23f664cb7",
     "extract_dir": "CCStopper",
     "shortcuts": [
         [
